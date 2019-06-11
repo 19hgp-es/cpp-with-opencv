@@ -15,7 +15,9 @@ sudo apt-get install -y mesa-utils libgl1-mesa-dri libqt4-opengl-dev
 sudo apt-get install -y libatlas-base-dev gfortran libeigen3-dev
 sudo apt-get install -y python2.7-dev python3-dev python-numpy python3-numpy
 
-cd ~/cpp-with-opencv/
+echo -e "\n ================ \n [INIT] Initalization update and prerequisite package setting Done. \n ========================== \n"
+echo -e "\n [MAIN] Opencv Install Starting... \n"
+
 mkdir opencv
 cd opencv
 wget -O opencv.zip https://github.com/opencv/opencv/archive/4.1.0.zip
@@ -44,7 +46,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D WITH_QT=ON \
 -D WITH_GTK=OFF \
 -D WITH_OPENGL=ON \
--D OPENCV_EXTRA_MODULES_PATH=~/cpp-with-opencv/opencv/opencv_contrib-4.1.0/modules \
+-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.1.0/modules \
 -D WITH_V4L=ON  \
 -D WITH_FFMPEG=ON \
 -D WITH_XINE=ON \
@@ -55,4 +57,9 @@ make -j4
 sudo make install
 sudo sh -c 'echo '/usr/local/lib' > /etc/ld.so.conf.d/opencv.conf'
 sudo ldconfig
+
+echo -e "\n [MAIN] Opencv Install Done... \n"
+
+cd ../../../
+rm -rf ./opencv/
 

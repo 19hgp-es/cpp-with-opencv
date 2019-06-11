@@ -8,7 +8,7 @@ rm cmake-3.11.0.tar.gz
 cd cmake-3.11.0/
 
 
-echo -e "\n============\n Setting system CUrl \n ==============\n"
+echo -e "\n============\n Setting system Curl \n ==============\n"
 sudo apt-get -y install libcurl4-gnutls-dev
 sudo apt-get -y install zlib1g-dev
 ./bootstrap --parallel=$(nproc) --system-curl
