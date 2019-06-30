@@ -6,6 +6,12 @@ tutorial with setting opencv
 `cmake==3.11.0`
 `opencv==4.1.0`
 
+## How to setting
+After you clone this project, Setting up like this processes.
+(Maybe you must run this shellcodes at root authory.)
+1. `~/cpp-with-opencv# ./cmake_setup.sh`
+2. `~/cpp-with-opencv# ./opencv.sh`
+
 ## Patch Note
 
 - You Must Check c++ standard library c++11 version. Check example Makefile.
